@@ -122,13 +122,73 @@
                     <view key="view" contentMode="scaleToFill" id="BGT-0D-ure">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleAspectFit" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="gNh-XW-QL5">
+                                <rect key="frame" x="20" y="701" width="374" height="100"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZmZ-rV-TgK">
+                                        <rect key="frame" x="0.0" y="43" width="75" height="14"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Awf-dp-JRF">
+                                        <rect key="frame" x="75" y="43" width="74.5" height="14"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wNE-qK-tlm">
+                                        <rect key="frame" x="149.5" y="43" width="75" height="14"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="avI-2A-cJ6">
+                                        <rect key="frame" x="224.5" y="43" width="74.5" height="14"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fnx-4k-tmG">
+                                        <rect key="frame" x="299" y="43" width="75" height="14"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain"/>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="Iv7-92-dc0"/>
+                                    <constraint firstItem="ZmZ-rV-TgK" firstAttribute="centerY" secondItem="gNh-XW-QL5" secondAttribute="centerY" id="rFO-ek-I2k"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3ZX-yY-Qxx">
+                                <rect key="frame" x="183" y="821" width="48" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Exit">
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="exitButton:" destination="5QG-hC-UH5" eventType="touchUpInside" id="5QT-sr-I7p"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="LsY-7s-xUo"/>
                         <color key="backgroundColor" systemColor="systemGreenColor"/>
+                        <constraints>
+                            <constraint firstItem="LsY-7s-xUo" firstAttribute="bottom" secondItem="3ZX-yY-Qxx" secondAttribute="bottom" constant="10" id="3vv-ov-Y4W"/>
+                            <constraint firstItem="gNh-XW-QL5" firstAttribute="leading" secondItem="LsY-7s-xUo" secondAttribute="leading" constant="20" id="4V0-eU-RKT"/>
+                            <constraint firstItem="3ZX-yY-Qxx" firstAttribute="top" secondItem="gNh-XW-QL5" secondAttribute="bottom" constant="20" id="Ctr-Kw-2Ke"/>
+                            <constraint firstItem="3ZX-yY-Qxx" firstAttribute="centerX" secondItem="LsY-7s-xUo" secondAttribute="centerX" id="KDe-vG-Q3J"/>
+                            <constraint firstItem="LsY-7s-xUo" firstAttribute="trailing" secondItem="gNh-XW-QL5" secondAttribute="trailing" constant="20" id="bWq-ap-bZy"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="lizardButton" destination="avI-2A-cJ6" id="Stf-jS-5U1"/>
+                        <outlet property="paperButton" destination="Awf-dp-JRF" id="fgp-hR-cUj"/>
+                        <outlet property="rockButton" destination="ZmZ-rV-TgK" id="sy5-vQ-I9u"/>
+                        <outlet property="scissorsButton" destination="wNE-qK-tlm" id="cSL-Uj-5yO"/>
+                        <outlet property="spockButton" destination="fnx-4k-tmG" id="XNK-DM-tw8"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hPq-Sc-BGZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="791" y="86"/>
+            <point key="canvasLocation" x="789.85507246376812" y="85.714285714285708"/>
         </scene>
         <!--MultiplayerVC-->
         <scene sceneID="qie-GB-QtT">
